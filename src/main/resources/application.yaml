@@ -1,0 +1,15 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /service
+  max-http-header-size: 102400
+
+he-weather:
+  client-key: 81326875134b42869fbde84b9d3c41c9
+  now-api: https://devapi.qweather.com/v7/weather/now?
+
+city-info:
+  city-map: 
+    1BABF: Sydney
+    754D9: Melbourne
+    F7F3: Wollongong
