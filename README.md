@@ -21,14 +21,23 @@ mvn install
 # start the service
 cd target
 java -jar demo-1.0.0-RELEASE.jar
+
+## or
+nohup java -jar demo-1.0.0-RELEASE.jar > DemoService.log 2>&1 &
 ```
 
 ## REST APIs
 
 1. Get city options
+
 http://host-address:8081/service/weather/cities
 
+Call the published API:
+
+GET http://81.70.79.188/service/weather/cities
+
 Response: 
+
 {
     "1BABF": "Sydney",
     "754D9": "Melbourne",
@@ -36,11 +45,15 @@ Response:
 }
 
 2. Get weather by cityId
+
 http://host-address:8081/service/weather/get?cityId=
 
-Request Example：
-GET http://localhost:8081/service/weather/get?cityId=F7F3
+Call the published API:
+
+GET http://81.70.79.188/service/weather/get?cityId=F7F3
+
 Response Example: 
+
 {
     "cityId": "F7F3",
     "cityName": "Wollongong",
@@ -50,6 +63,17 @@ Response Example:
     "updatedTime": "2021-11-26T07:00+11:00",
     "errorMsg": null
 }
+
+
+## Weather Front-end
+
+The front-end project:
+
+https://github.com/hyangdl/my-project
+
+The published web:
+
+http://81.70.79.188/weather/#/weather
 
 
 ### Reference Documentation
